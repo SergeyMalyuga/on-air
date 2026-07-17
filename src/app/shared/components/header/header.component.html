@@ -1,0 +1,28 @@
+<header id="header" class="header">
+  <div class="header__content container">
+    <a class="header__link-logo" [routerLink]="[AppRoute.MAIN]" aria-label="Вернуться на главную">
+      <img class="header-image-logo" src="/assets/images/vector/logo-color.svg" width="96" height="51"
+           alt="Логотип on air"/>
+    </a>
+    <nav class="header__nav" aria-label="Основная навигация">
+      <ul class="header__list-nav">
+        <li>
+          <a class="header__link header__link--nav" href="#">Movies</a>
+        </li>
+        <li>
+          <a class="header__link header__link--nav" href="#">Series</a>
+        </li>
+        <li>
+          <a class="header__link header__link--nav" href="#">Channels</a>
+        </li>
+        <li>
+          <button class="header__button header__button-nav" type="button">Music</button>
+        </li>
+      </ul>
+    </nav>
+    <label for="header-search" class="visually-hidden">Поиск</label>
+    <div class="header__wrapper-search">
+      <input id="header-search" class="header__input-search" type="search" placeholder="Search"/>
+    </div>
+  </div>
+</header>

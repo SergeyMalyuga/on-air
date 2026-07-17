@@ -1,0 +1,93 @@
+@use '../../../../styles/variables' as variables;
+@use '../../../../styles/functions' as *;
+
+.header {
+  background-color: variables.$header-background;
+  padding: rem(30px) 0 rem(20px);
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    &-nav {
+      display: flex;
+      gap: 96px;
+    }
+  }
+
+  &__link, &__button {
+    display: block;
+    text-decoration: none;
+
+    &--nav, &.header__button {
+      padding: 10px 34px;
+      color: variables.$text-main-color;
+      font-size: rem(24px);
+      font-weight: 500;
+      line-height: rem(29px);
+      letter-spacing: 0%;
+      text-align: center;
+      border-radius: rem(60px);
+      transition: background-color 0.5s ease;
+
+      &:hover {
+        background-color: variables.$link-bg-hover-color;
+      }
+
+      &:active {
+        background-color: variables.$link-bg-active-color ;
+      }
+    }
+  }
+
+  &__button {
+    &-nav {
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__wrapper {
+    &-search {
+      position: relative;
+      max-width: 334px;
+      width: 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        display: block;
+        width: rem(24px);
+        height: rem(24px);
+        background-image: url("/assets/images/vector/search-icon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+  }
+
+  &__input {
+    &-search {
+      color: variables.$input-search-color;
+      font-family: variables.$font-family-primary;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 0%;
+      text-align: left;
+      width: 100%;
+      padding: rem(17px) rem(20px) rem(17px) rem(52px);
+      border: none;
+      border-radius: 8px;
+      background-color: variables.$bg-dark;
+    }
+  }
+}
