@@ -1,0 +1,6 @@
+@use "variables" as variables;
+@use 'sass:math';
+
+@function rem($pixels) {
+@return math.div($pixels, variables.$font-size-base) * 1rem;
+}

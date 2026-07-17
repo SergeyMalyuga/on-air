@@ -1,0 +1,27 @@
+@use "sass:color";
+
+// ===== COLOR ===== //
+$white: rgb(255 255 255);
+$black: rgb(0 0 0);
+$pink: rgb(225 60 82);
+$gray: rgb(102 102 102);
+
+/* text */
+$text-main-color: $white;
+
+/* background */
+$bg-dark: color.scale($black, $alpha: -30%);
+
+/* header */
+$header-background: color.scale($black, $alpha: -10%);
+
+/* link */
+$link-bg-hover-color: $pink;
+$link-bg-active-color: color.scale($pink, $blackness: 15%);
+
+/* input */
+$input-search-color: $gray;
+
+// ===== TYPOGRAPHY ===== //
+$font-family-primary: 'Ubuntu', sans-serif;
+$font-size-base: 16px;
