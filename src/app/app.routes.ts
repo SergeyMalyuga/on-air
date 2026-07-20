@@ -4,7 +4,7 @@ import {AppRoute} from './core/constants/const';
 export const routes: Routes = [
   {
     path: AppRoute.MAIN,
-    title: 'MainComponent page',
+    title: 'Main',
     loadComponent: () => import('./pages/main/main.component').then(m => m.MainComponent)
   }
 ];

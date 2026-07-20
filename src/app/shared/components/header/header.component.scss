@@ -3,9 +3,14 @@
 
 .header {
   background-color: variables.$header-background;
-  padding: rem(30px) 0 rem(20px);
+  padding: rem(20px) 0 rem(21px);
 
   &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
     display: flex;
     align-items: center;
   }
@@ -13,22 +18,26 @@
   &__list {
     &-nav {
       display: flex;
-      gap: 96px;
+      gap: rem(96px);
+
+      @media (width <= 1675px) {
+        gap: rem(43px);
+      }
     }
   }
 
   &__link, &__button {
     display: block;
     text-decoration: none;
+    color: variables.$text-main-color;
+    font-size: rem(24px);
+    font-weight: 500;
+    line-height: rem(29px);
+    letter-spacing: 0%;
+    text-align: center;
 
-    &--nav, &.header__button {
+    &--nav, &--action, &.header__button {
       padding: 10px 34px;
-      color: variables.$text-main-color;
-      font-size: rem(24px);
-      font-weight: 500;
-      line-height: rem(29px);
-      letter-spacing: 0%;
-      text-align: center;
       border-radius: rem(60px);
       transition: background-color 0.5s ease;
 
@@ -37,8 +46,38 @@
       }
 
       &:active {
-        background-color: variables.$link-bg-active-color ;
+        background-color: variables.$link-bg-active-color;
       }
+    }
+
+    &-logo {
+      margin-right: rem(56px);
+
+      img {
+        display: block;
+      }
+    }
+
+    &--action {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: rem(24px);
+        height: rem(24px);
+        background-image: url("/assets/images/vector/profile-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    @media (width <= 1460px) {
+      font-size: rem(20px);
+      line-height: rem(24px);
     }
   }
 
@@ -55,6 +94,7 @@
     &-search {
       position: relative;
       max-width: 334px;
+      min-width: 280px;
       width: 100%;
 
       &::before {
@@ -71,6 +111,24 @@
         background-size: contain;
         background-position: center;
       }
+
+      @media (width <= 1350px) {
+        display: none;
+      }
+    }
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 19px;
     }
   }
 
@@ -84,10 +142,15 @@
       letter-spacing: 0%;
       text-align: left;
       width: 100%;
-      padding: rem(17px) rem(20px) rem(17px) rem(52px);
+      padding: rem(16px) rem(20px) rem(16px) rem(52px);
       border: none;
       border-radius: 8px;
       background-color: variables.$bg-dark;
+
+      @media (width <= 1465px) {
+        font-size: rem(20px);
+        line-height: rem(24px);
+      }
     }
   }
 }

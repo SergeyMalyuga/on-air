@@ -31,6 +31,10 @@ body {
   padding: 0 rem(58px);
   margin: 0 auto;
 
+  @media (width <= 1350px) {
+    padding: 0 rem(30px);
+  }
+
   @media (width <= 768px) {
     padding: 0 rem(20px);
   }
