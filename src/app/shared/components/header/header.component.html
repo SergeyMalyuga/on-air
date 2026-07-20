@@ -4,7 +4,11 @@
       <img class="header-image-logo" src="/assets/images/vector/logo-color.svg" width="96" height="51"
            alt="Логотип on air"/>
     </a>
-    <div class="header__wrapper-content">
+    <div
+      [ngClass]="{
+    'header__wrapper-content': true,
+    'open': isNavMenuOpen(),
+    }">
       <nav class="header__nav" aria-label="Основная навигация">
         <ul class="header__list-nav">
           <li>
@@ -31,5 +35,18 @@
         </a>
       </div>
     </div>
+    <button
+      (click)="toggleNavMenu()"
+      [ngClass]="{
+    'header__burger': true,
+    'open': isNavMenuOpen()
+    }" type="button">
+      <span class="header__burger-line"></span>
+      <span
+        [ngClass]="{
+      'header__burger-text': true,
+      'open': isNavMenuOpen()
+      }">Menu</span>
+    </button>
   </div>
 </header>
