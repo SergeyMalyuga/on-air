@@ -5,6 +5,7 @@ $white: rgb(255 255 255);
 $black: rgb(0 0 0);
 $pink: rgb(225 60 82);
 $gray: rgb(102 102 102);
+$gray-dark: rgb(35 34 41);
 
 /* text */
 $text-main-color: $white;
@@ -21,6 +22,17 @@ $link-bg-active-color: color.scale($pink, $blackness: 15%);
 
 /* input */
 $input-search-color: $gray;
+$input-search-bg-accent: $gray-dark;
+
+/* burger */
+$burger-bg-main: $white;
+$burger-bg-active: color.scale($white, $blackness: 20%);
+$burger-text-main: $white;
+$burger-text-active: color.scale($white, $blackness: 20%);
+
+/* overlay */
+$overlay-bg-main: $black;
+
 
 // ===== TYPOGRAPHY ===== //
 $font-family-primary: 'Ubuntu', sans-serif;
