@@ -2,16 +2,20 @@
 
 // ===== COLOR ===== //
 $white: rgb(255 255 255);
+$white-light: rgb(217 217 217);
 $black: rgb(0 0 0);
 $pink: rgb(225 60 82);
-$gray: rgb(102 102 102);
-$gray-dark: rgb(35 34 41);
+$gray-300: rgb(102 102 102);
+$gray-400: rgb(217 217 217 / 30%);
+$gray-500: rgb(35 34 41);
+$gray-600: rgb(25 25 25);
 
 /* text */
 $text-main-color: $white;
 
 /* background */
 $bg-dark: color.scale($black, $alpha: -30%);
+$bg-accent: $gray-600;
 
 /* header */
 $header-background: color.scale($black, $alpha: -10%);
@@ -21,8 +25,8 @@ $link-bg-hover-color: $pink;
 $link-bg-active-color: color.scale($pink, $blackness: 15%);
 
 /* input */
-$input-search-color: $gray;
-$input-search-bg-accent: $gray-dark;
+$input-search-color: $gray-300;
+$input-search-bg-accent: $gray-500;
 
 /* burger */
 $burger-bg-main: $white;
@@ -33,6 +37,12 @@ $burger-text-active: color.scale($white, $blackness: 20%);
 /* overlay */
 $overlay-bg-main: $black;
 
+/* swiper */
+$swiper-bullet-bg-main: $gray-400;
+$swiper-bullet-bg-active: $white-light;
+$swiper-nav-bg-main: $white;
+$swiper-nav-bg-hover: color.scale($white, $blackness: 15%);
+$swiper-nav-bg-active: color.scale($white, $blackness: 30%);
 
 // ===== TYPOGRAPHY ===== //
 $font-family-primary: 'Ubuntu', sans-serif;
