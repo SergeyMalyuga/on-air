@@ -1,6 +1,9 @@
 @use './styles/fonts';
 @use './styles/functions' as *;
 @use './styles/variables' as variables;
+@use 'swiper/css';
+@use "swiper/css/navigation";
+@use "swiper/css/pagination";
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -49,4 +52,64 @@ body {
   overflow: hidden;
   clip-path: inset(50%);
   border: 0;
+}
+
+.home-page__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: max-content;
+}
+
+.home-page__swiper-pagination .swiper-pagination-bullet {
+  width: 46px;
+  height: 4px;
+  background-color: variables.$swiper-bullet-bg-main;
+  border-radius: 0;
+  opacity: 1;
+
+  @media (width <= 865px) {
+    width: 25px;
+    height: 2px;
+  }
+}
+
+.home-page__swiper-pagination .swiper-pagination-bullet-active {
+  background-color: variables.$swiper-bullet-bg-active;
+}
+
+.home-page__swiper-button-previous, .home-page__swiper-button-next {
+  width: 52px;
+  height: 52px;
+  background-color: variables.$swiper-nav-bg-main;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$swiper-nav-bg-hover;
+  }
+
+  &:active {
+    background-color: variables.$swiper-nav-bg-active;
+  }
+
+  @media (width <= 865px) {
+    width: 29px;
+    height: 29px;
+  }
+
+}
+
+.home-page__swiper-button-next {
+  mask-image: url("/assets/images/vector/swiper-nav-next-desktop.svg");
+
+  @media (width <= 865px) {
+    mask-image: url("/assets/images/vector/swiper-nav-next-mobile.svg");
+  }
+
+}
+
+.home-page__swiper-button-previous {
+  mask-image: url("/assets/images/vector/swiper-nav-prev-desktop.svg");
+
+  @media (width <= 865px) {
+    mask-image: url("/assets/images/vector/swiper-nav-prev-mobile.svg");
+  }
 }
