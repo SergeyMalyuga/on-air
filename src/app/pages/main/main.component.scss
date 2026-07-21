@@ -1,0 +1,58 @@
+@use '../../../styles/variables' as variables;
+
+.home-page {
+  background-color: variables.$bg-accent;
+
+  &__wrapper {
+    &-image {
+      display: block;
+      width: 100%;
+      min-height: 390px;
+    }
+  }
+
+  &__hero-content {
+    position: relative;
+    padding: 0;
+  }
+
+  &__swiper-controls {
+    position: absolute;
+    width: 100%;
+    bottom: 49px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    gap: 100px;
+
+    @media (width <= 865px) {
+      gap: 50px;
+      bottom: 25px;
+    }
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  width: 100%;
+  min-height: 390px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @media (width <= 865px) {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (width <= 678px) {
+      object-position: clamp(-18.75rem, -34.316rem + 69.1824vw, -5rem);
+    }
+  }
+}
+
