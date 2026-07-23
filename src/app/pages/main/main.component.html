@@ -4,16 +4,29 @@
     <section class="home-page__hero">
       <div class="home-page__hero-content container">
         <h1 class="visually-hidden">Universe of content and channels</h1>
-        <p class="home-page__text">Dive into a <span>universe</span> of un-ending content and channels</p>
-        <app-swiper [swiperOptions]="MAIN_HERO_SWIPER_CONFIG">
+        <div class="home-page__wrapper-info">
+          <p class="home-page__text">Dive into a <span>universe</span> of un-ending content and channels</p>
+          <a class="home-page__link-start-trial" href="#">Start <span>free</span> trial</a>
+        </div>
+        <app-swiper class="home-page__swiper" [swiperOptions]="MAIN_HERO_SWIPER_CONFIG">
           <div class="swiper-slide">
             <picture class="home-page__wrapper-image">
               <source srcset="/assets/images/raster/hero-slide-1-mobile.jpg" media="(max-width: 865px)">
               <img src="/assets/images/raster/hero-slide-1-desktop.jpg" width="1923" height="930"/>
             </picture>
           </div>
-          <div class="swiper-slide"><img src="/assets/images/raster/hero-slide-2.jpg"/></div>
-          <div class="swiper-slide"><img src="/assets/images/raster/hero-slide-3.jpg"/></div>
+          <div class="swiper-slide">
+            <picture class="home-page__wrapper-image">
+              <source srcset="/assets/images/raster/hero-slide-1-mobile.jpg" media="(max-width: 865px)">
+              <img src="/assets/images/raster/hero-slide-1-desktop.jpg" width="1923" height="930"/>
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture class="home-page__wrapper-image">
+              <source srcset="/assets/images/raster/hero-slide-1-mobile.jpg" media="(max-width: 865px)">
+              <img src="/assets/images/raster/hero-slide-1-desktop.jpg" width="1923" height="930"/>
+            </picture>
+          </div>
         </app-swiper>
         <div class="home-page__swiper-controls container">
           <div class="home-page__swiper-button-previous"></div>
