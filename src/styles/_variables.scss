@@ -24,6 +24,12 @@ $header-background: color.scale($black, $alpha: -10%);
 $link-bg-hover-color: $pink;
 $link-bg-active-color: color.scale($pink, $blackness: 15%);
 
+
+/* button */
+$button-bg-main: $pink;
+$button-bg-hover: color.scale($pink, $blackness: 15%);
+$button-bg-active: color.scale($pink, $blackness: 30%);;
+
 /* input */
 $input-search-color: $gray-300;
 $input-search-bg-accent: $gray-500;
