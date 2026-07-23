@@ -5,6 +5,7 @@
            alt="Логотип on air"/>
     </a>
     <div
+      id="header-nav-menu"
       [ngClass]="{
     'header__wrapper-content': true,
     'open': isNavMenuOpen(),
@@ -40,7 +41,11 @@
       [ngClass]="{
     'header__burger': true,
     'open': isNavMenuOpen()
-    }" type="button">
+    }" type="button"
+      aria-haspopup="true"
+      [attr.aria-expanded]="isNavMenuOpen()"
+      aria-controls="header-nav-menu"
+    >
       <span class="header__burger-line"></span>
       <span
         [ngClass]="{
