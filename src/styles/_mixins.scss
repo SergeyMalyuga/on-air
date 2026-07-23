@@ -1,0 +1,30 @@
+@use './variables' as variables;
+@use './functions' as *;
+
+@mixin button-base($width: 289px) {
+  padding: rem(10px) rem(34px);
+  width: $width;
+  background-color: variables.$button-bg-main;
+  color: variables.$text-main-color;
+  font-size: rem(24px);
+  font-weight: 500;
+  line-height: rem(29px);
+  transition: background-color 0.3s ease;
+  text-align: center;
+  border-radius: rem(60px);
+
+  &:hover {
+    background-color: variables.$button-bg-hover;
+  }
+
+  &:active {
+    background-color: variables.$button-bg-active;
+  }
+
+  @media (width <= 480px) {
+    max-width: 174px;
+    padding: rem(10px) rem(30px);
+    font-size: rem(16px);
+    line-height: rem(19px);
+  }
+}
