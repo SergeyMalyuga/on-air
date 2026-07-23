@@ -114,3 +114,24 @@ body {
     mask-image: url("/assets/images/vector/swiper-nav-prev-mobile.svg");
   }
 }
+
+.section {
+  &__title {
+    color: variables.$text-main-color;
+    font-size: rem(32px);
+    font-weight: 400;
+    line-height: rem(37px);
+    text-align: left;
+    margin-bottom: 20px;
+
+    @media (width <= 680px) {
+      font-size: rem(20px);
+      line-height: rem(22px);
+    }
+
+    @media (width <= 480px) {
+      font-size: rem(16px);
+      line-height: rem(18px);
+    }
+  }
+}
