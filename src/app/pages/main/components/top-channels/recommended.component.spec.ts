@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopChannelsComponent } from './top-channels.component';
+import { RecommendedComponent } from './recommended.component';
 
-describe('TopChannelsComponent', () => {
-  let component: TopChannelsComponent;
-  let fixture: ComponentFixture<TopChannelsComponent>;
+describe('RecommendedComponent', () => {
+  let component: RecommendedComponent;
+  let fixture: ComponentFixture<RecommendedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TopChannelsComponent],
+      imports: [RecommendedComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TopChannelsComponent);
+    fixture = TestBed.createComponent(RecommendedComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

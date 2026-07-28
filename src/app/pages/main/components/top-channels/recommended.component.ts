@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-top-channels',
   imports: [],
-  templateUrl: './top-channels.component.html',
-  styleUrl: './top-channels.component.scss',
+  templateUrl: './recommended.component.html',
+  styleUrl: './recommended.component.scss',
 })
-export class TopChannelsComponent {}
+export class RecommendedComponent {}
