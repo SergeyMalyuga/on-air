@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-top-channels',
+  selector: 'app-recommended',
   imports: [],
   templateUrl: './recommended.component.html',
   styleUrl: './recommended.component.scss',
