@@ -64,5 +64,20 @@
         }
       }
     }
+
+    &--socials {
+
+      a {
+        --icon-stroke: rgb(54, 54, 54);
+        --icon-fill: rgb(255, 255, 255);
+
+        transition:  --icon-stroke 3s ease, --icon-fill 3s ease;
+
+       &:hover {
+         --icon-stroke: rgb(85 172 227);
+         --icon-fill: rgb(85 172 227);
+       }
+      }
+    }
   }
 }
