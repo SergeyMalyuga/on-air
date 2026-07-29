@@ -1,1 +1,26 @@
 @use '../../../../styles/variables' as variables;
+
+.footer {
+
+  &__logo {
+    display: block;
+    width: max-content;
+
+    &-image {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      @media (width <= 780px) {
+        width: 170px;
+        height: 91px;
+      }
+    }
+  }
+
+  &__wrapper {
+    &-logo {
+      display: block;
+    }
+  }
+}

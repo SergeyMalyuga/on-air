@@ -1,1 +1,10 @@
-<p>footer works!</p>
+<footer id="footer" class="footer">
+  <div class="footer__content container">
+    <a class="footer__logo" [routerLink]="AppRoute.MAIN">
+      <picture class="footer__wrapper-logo">
+        <source srcset="/assets/images/vector/logo-white-mobile.svg" media="(max-width: 780px)">
+        <img class="footer__logo-image" src="/assets/images/vector/logo-white-desktop.svg" width="96" height="51" alt="Логотип кинотеатра"/>
+      </picture>
+    </a>
+  </div>
+</footer>
